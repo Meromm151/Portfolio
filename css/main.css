@@ -1,0 +1,6 @@
+:root{
+  --main-s-padding: 80px
+}
+.section{
+  padding-block: var(--main-s-padding);
+}
