@@ -1,202 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <!-- bootstarp -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- main style -->
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg position-fixed w-100">
-      <div class="container">
-        <a class="navbar-brand" href="#">MoS.Dev</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <!-- bootstarp -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- main style -->
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Potfolio</title>
+</head>
+
+<body>
+  <nav id="navbar" class="navbar navbar-expand-lg position-fixed w-100 navbar-dark my-shift-down">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <h2 class="fs-3 m-0">MMS</h2>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#projects" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Projects
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <button class="border-0 bg-transparent text-white">
+          <i class="fa-solid fa-moon"></i>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Skills</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Projects
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-          <button class="border-0 bg-white">
-            <i class="fa-solid fa-moon"></i>
-          </button>
+      </div>
+    </div>
+  </nav>
+  <div >
+    <button class="navbar-toggler d-flex position-fixed my-d-hide top-0 mt-5" type="button" id="myToggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+      <i class="fa-solid fa-bars-staggered fs-4"></i>
+    </button>
+    <div class="my-sidebar offcanvas offcanvas-end vh-100 bg-dark w-25 position-fixed fs-1" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+      <ul class="h-50 d-flex flex-column justify-content-between ">
+        <li class="text-end pt-3 pe-3">
+          <button type="button" id="sidebarClose" class="border-0 bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark text-white"></i></button>
+          
+        </li>
+        <li class="overflow-hidden">
+          <a class="nav-link hidden-a" href="#home"> <i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="overflow-hidden">
+          <a class="nav-link hidden-a" href="#about"> <i class="fa-solid fa-address-card"></i> About</a>
+        </li>
+        <li class="overflow-hidden">
+          <a class="nav-link hidden-a" href="#skills"> <i class="fa-solid fa-gears"></i> Skills</a>
+        </li>
+        <li class="overflow-hidden">
+          <a class="nav-link dropdown-toggle hidden-a" href="#projects" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="fa-solid fa-diagram-project"></i> Projects
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+        </ul>
+        </li>
+        <li class="overflow-hidden">
+          <a class="nav-link hidden-a" href="#contact"> <i class="fa-solid fa-phone"></i> Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <button id="goUp"><i class="fa-solid fa-angle-up fs-3 text-white"></i></button>
+  <main class="text-white overflow-hidden">
+    <section id="home"
+      class="vh-100 d-flex align-items-center justify-content-center position-relative text-light wrapper">
+      <div class="base one"></div>
+      <div class="base two"></div>
+      <div class="base three"></div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-8 my-auto position-relative z-3">
+            <div class="caption ms-5">
+              <div class="title">
+                <span class="fs-1">Hi, I'm </span>
+                <h1>Mostafa Sami</h1>
+              </div>
+              <p class="w-75 fs-1">
+                a front-end developer , building responsive and user-friendly
+                websites is my job.
+              </p>
+              <button class="btn main-btn">
+                Hire me
+              </button>
+            </div>
+          </div>
+          <div class="col-3 ">
+            <div class="my-pic mb-5 position-relative">
+              <div class="my-border"></div>
+              <img class="mw-100" src="image/Man-PNG-File.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="wave">
+          <svg id="wave" style="transform: rotate(0deg); transition: 0.3s" viewBox="0 0 1440 280" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                <stop stop-color="rgba(11, 16, 27, 1)" offset="0%"></stop>
+                <stop stop-color="rgba(11, 16, 27, 1)" offset="100%"></stop>
+              </linearGradient>
+            </defs>
+            <path style="transform: translate(0, 0px); opacity: 1" fill="url(#sw-gradient-0)"
+              d="M0,196L60,205.3C120,215,240,233,360,219.3C480,205,600,159,720,121.3C840,84,960,56,1080,65.3C1200,75,1320,121,1440,158.7C1560,196,1680,224,1800,200.7C1920,177,2040,103,2160,74.7C2280,47,2400,65,2520,74.7C2640,84,2760,84,2880,70C3000,56,3120,28,3240,28C3360,28,3480,56,3600,84C3720,112,3840,140,3960,154C4080,168,4200,168,4320,172.7C4440,177,4560,187,4680,186.7C4800,187,4920,177,5040,182C5160,187,5280,205,5400,196C5520,187,5640,149,5760,144.7C5880,140,6000,168,6120,191.3C6240,215,6360,233,6480,214.7C6600,196,6720,140,6840,140C6960,140,7080,196,7200,205.3C7320,215,7440,177,7560,158.7C7680,140,7800,140,7920,130.7C8040,121,8160,103,8280,88.7C8400,75,8520,65,8580,60.7L8640,56L8640,280L8580,280C8520,280,8400,280,8280,280C8160,280,8040,280,7920,280C7800,280,7680,280,7560,280C7440,280,7320,280,7200,280C7080,280,6960,280,6840,280C6720,280,6600,280,6480,280C6360,280,6240,280,6120,280C6000,280,5880,280,5760,280C5640,280,5520,280,5400,280C5280,280,5160,280,5040,280C4920,280,4800,280,4680,280C4560,280,4440,280,4320,280C4200,280,4080,280,3960,280C3840,280,3720,280,3600,280C3480,280,3360,280,3240,280C3120,280,3000,280,2880,280C2760,280,2640,280,2520,280C2400,280,2280,280,2160,280C2040,280,1920,280,1800,280C1680,280,1560,280,1440,280C1320,280,1200,280,1080,280C960,280,840,280,720,280C600,280,480,280,360,280C240,280,120,280,60,280L0,280Z">
+            </path>
+          </svg>
         </div>
       </div>
-    </nav>
-    <main>
-      <section
-        id="home"
-        class="vh-100 d-flex align-items-center justify-content-center text-center"
-      >
-        <div class="container">
-          <div class="caption">
-            <div class="title">
-              <span>Hi, I'm </span>
-              <h1>Mostafa Sami</h1>
-            </div>
-            <p class="w-50 m-auto">
-              a front-end developer , building responsive and user-friendly
-              websites is my job.
-            </p>
-          </div>
-          <div class="auther-pic"></div>
-        </div>
-      </section>
-      <section id="about" class="section">
-        <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-5">
-              <div class="profile-pic">
-                <img src="" alt="" />
+    </section>
+    <section id="about" class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-5">
+            <div class="my-border rounded-2">
+              <div class="profile-pic rounded-2 overflow-hidden">
+                <img class="w-100" src="image/360_F_586138525_VKDstaMHGTsVDEYrm79rbDDWs5lvSsSh.jpg" alt="" />
               </div>
             </div>
-            <div class="col-6">
-              <div class="about-me">
-                <span>Hi, I'm </span>
-                <h2>Mostafa Sami ,</h2>
-                <p class="lh-lg fs-5 text-dark">
-                  a front-end developer building responsive and user-friendly
-                  websites is my job. I specialize in HTML, CSS, JavaScript, and
-                  Angular, and have worked on projects for clients in various
-                  industries, such as healthcare, finance, and e-commerce. My
-                  passion for web development started when I was in college, and
-                  since then I have honed my skills through self-learning,
-                  online courses, and hands-on experience. I am always eager to
-                  learn new technologies and techniques, and to share my
-                  knowledge with others. In my free time, I enjoy contributing
-                  to open-source projects, attending tech meetups, and reading
-                  blogs and articles about web development. I also love
-                  traveling, hiking, and photography. If you're looking for a
-                  front-end developer who can bring your ideas to life and
-                  exceed your expectations, feel free to connect with me
-                </p>
-                <div class="social-links d-flex">
-                  <div class="facebook">
-                    <a href="" class="p-3 fs-3 text-dark">
-                      <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                  </div>
-                  <div class="linked-in">
-                    <a href="" class="p-3 fs-3 text-dark">
-                      <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                  </div>
-                  <div class="e-mail">
-                    <a href="" class="p-3 fs-3 text-dark">
-                      <i class="fa-solid fa-at"></i>
-                    </a>
-                  </div>
-                  <div class="whatsapp">
-                    <a href="" class="p-3 fs-3 text-dark">
-                      <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                  </div>
-                  <div class="github">
-                    <a href="" class="p-3 fs-3 text-dark">
-                      <i class="fa-brands fa-github"></i>
-                    </a>
-                  </div>
+          </div>
+          <div class="col-6 ps-5 offset-1">
+            <div class="about-me">
+              <span class="lh-base fs-5">Hi, I'm </span>
+              <h2 class="lh-base fs-1">Mostafa Sami ,</h2>
+              <p class="lh-base fs-5">
+                a front-end developer. I specialize in HTML, CSS, JavaScript, and
+                Angular, and have worked on projects for clients in various
+                industries.
+              </p>
+              <p class="lh-base fs-5">
+                My passion for web development started when I was in college,
+                and since then I have honed my skills through self-learning,
+                online courses, and hands-on experience. I am always eager to
+                learn new technologies and techniques, and to share my
+                knowledge with others.
+              </p>
+              <p class="lh-base fs-5">
+                If you're looking for a front-end developer who can bring your
+                ideas to life and exceed your expectations, feel free to
+                connect with me
+              </p>
+              <a href="#contact" class="btn main-btn">
+                Contact Me
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="row text-center fs-5 justify-content-between">
+          <div class="col-2">
+            <div class="icon">
+              <i class="fa-brands fa-html5 d-block fs-1 mb-2"></i>
+              <span>HTML5</span>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="icon">
+              <i class="fa-brands fa-css3-alt d-block fs-1 mb-2"></i>
+              <span>CSS3</span>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="icon">
+              <i class="fa-brands fa-square-js d-block fs-1 mb-2"></i>
+              <span>JavaScript</span>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="icon">
+              <i class="fa-brands fa-bootstrap d-block fs-1 mb-2"></i>
+              <span>BootStrap</span>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="icon">
+              <i class="fa-brands fa-angular d-block fs-1 mb-2"></i>
+              <span>BootStrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="section position-relative ">
+      <div class="base one"></div>
+      <div class="base two"></div>
+      <div class="base three"></div>
+      <div class="galary">
+        <h2 class="text-center mb-5">Projects</h2>
+        <div class="container-fluid">
+          <div class="row p-5 align-items-center">
+            <div class="col-7 p-5 py-0">
+              <div class="card position-relative border-0">
+                <img src="image/project1.png" alt="" />
+                <div class="left position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                  <a href="" class="btn main-btn me-4">More Details</a>
+                  <a href="https://mealify-m.netlify.app/" class="btn main-btn" target="_blank">Live Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="project-desc">
+                <h3>
+                  Mealify
+                </h3>
+                <p class="fs-5 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fuga deserunt
+                  perspiciatis saepe in dolorum sequi non harum perferendis neque.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row p-5 justify-content-end align-items-center">
+            <div class="col-3">
+              <div class="project-desc">
+                <h3>
+                  Mostafa Sami
+                </h3>
+                <p class="fs-5 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fuga deserunt
+                  perspiciatis saepe in dolorum sequi non harum perferendis neque.</p>
+              </div>
+            </div>
+            <div class="col-6 p-5 py-0">
+              <div class="card position-relative border-0">
+                <img src="image/project2.png" alt="" />
+                <div class="right position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                  <a href="" class="btn main-btn me-4">More Details</a>
+                  <a href="https://mustafasami.netlify.app/" class="btn main-btn" target="_blank">Live
+                    Demo</a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="skills" class="section">
-        <div class="container">
-          <div class="row text-center fs-5">
-            <div class="col-3">
-              <div class="icon">
-                <i class="fa-brands fa-html5 d-block fs-1 mb-2"></i>
-                <span>HTML5</span>
+          <div class="row d-none p-5 align-items-center">
+            <div class="col-7 p-5 py-0">
+              <div class="card position-relative border-0">
+                <img src="image/project3.png" alt="" />
+                <div class="left position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                  <a href="" class="btn main-btn me-4">More Details</a>
+                  <a href="https://mostafasami-devfolio.netlify.app/" class="btn main-btn"
+                    target="_blank">Live Demo</a>
+                </div>
               </div>
             </div>
             <div class="col-3">
-              <div class="icon">
-                <i class="fa-brands fa-css3-alt d-block fs-1 mb-2"></i>
-                <span>CSS3</span>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="icon">
-                <i class="fa-brands fa-square-js d-block fs-1 mb-2"></i>
-                <span>JavaScript</span>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="icon">
-                <i class="fa-brands fa-bootstrap d-block fs-1 mb-2"></i>
-                <span>BootStrap</span>
+              <div class="project-desc">
+                <h3>
+                  DevFolio
+                </h3>
+                <p class="fs-5 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fuga deserunt
+                  perspiciatis saepe in dolorum sequi non harum perferendis neque.</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="projects" class="section">
-        <div class="galary">
-          <div class="row">
-            <div class="col-2">
-              <img src="" alt="">
-              <img src="" alt="">
+          <div class="row d-none p-5 justify-content-end align-items-center">
+            <div class="col-3">
+              <div class="project-desc">
+                <h3>
+                  Queen Service
+                </h3>
+                <p class="fs-5 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fuga deserunt
+                  perspiciatis saepe in dolorum sequi non harum perferendis neque.</p>
+              </div>
             </div>
-            <div class="col-2">
-              <img src="" alt="">
-            </div>
-            <div class="col-2">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
-            </div>
-            <div class="col-2">
-              <img src="" alt="">
-              <img src="" alt="">
-            </div>
-            <div class="col-2">
-              <img src="" alt="">
+            <div class="col-6 p-5 py-0">
+              <div class="card position-relative border-0">
+                <img src="image/project4.png" alt="" />
+                <div class="right position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                  <a href="" class="btn main-btn me-4">More Details</a>
+                  <a href="https://queen-services.netlify.app/" class="btn main-btn" target="_blank">Live
+                    Demo</a>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="row d-none p-5 align-items-center">
+            <div class="col-6 p-5 py-0">
+              <div class="card position-relative border-0">
+                <img src="image/project5.png" alt="" />
+                <div class="left position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                  <a href="" class="btn main-btn me-4">More Details</a>
+                  <a href="https://fokir-route.netlify.app/" class="btn main-btn" target="_blank">Live
+                    Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="project-desc">
+                <h3>
+                  Fokir
+                </h3>
+                <p class="fs-5 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fuga deserunt
+                  perspiciatis saepe in dolorum sequi non harum perferendis neque.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row d-none p-5 justify-content-end align-items-center">
+            <div class="col-3">
+              <div class="project-desc">
+                <h3>
+                  Dashboard
+                </h3>
+                <p class="fs-5 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fuga deserunt
+                  perspiciatis saepe in dolorum sequi non harum perferendis neque.</p>
+              </div>
+            </div>
+            <div class="col-6 p-5 py-0">
+              <div class="card position-relative border-0">
+                <img src="image/project6.png" alt="" />
+                <div class="right position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                  <a href="" class="btn main-btn me-4">More Details</a>
+                  <a href="https://mostafadashboard.netlify.app/" class="btn main-btn" target="_blank">Live
+                    Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row d-none p-5 align-items-center">
+            <div class="col-6 p-5 py-0">
+              <div class="card position-relative border-0">
+                <img src="image/project7.png" alt="" />
+                <div class="left position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                  <a href="" class="btn main-btn me-4">More Details</a>
+                  <a href="https://mostafabondi.netlify.app/" class="btn main-btn" target="_blank">Live
+                    Demo</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="project-desc">
+                <h3>
+                  Bondi
+                </h3>
+                <p class="fs-5 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fuga deserunt
+                  perspiciatis saepe in dolorum sequi non harum perferendis neque.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row d-none p-5 justify-content-end align-items-center" id="last">
+            <div class="col-3">
+              <div class="project-desc">
+                <h3>
+                  Bakary Shop
+                </h3>
+                <p class="fs-5 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fuga deserunt
+                  perspiciatis saepe in dolorum sequi non harum perferendis neque.</p>
+              </div>
+            </div>
+            <div class="col-6 p-5 py-0">
+              <div class="card position-relative border-0">
+                <img src="image/project8.png" alt="" />
+                <div class="right position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                  <a href="" class="btn main-btn me-4">More Details</a>
+                  <a href="https://mostafabakery.netlify.app/" class="btn main-btn" target="_blank">Live
+                    Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <button class="btn main-btn w-auto" type="button" my-aria-expanded="false" id="myCollapse">Show
+              More</button>
+          </div>
         </div>
-      </section>
-    </main>
-    <!-- bootstrap JS -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-  </body>
+      </div>
+    </section>
+    <section id="contact" class="section text-center">
+      <h2>Contact Me</h2>
+      <div class="social-links d-flex justify-content-center">
+        <div class="facebook">
+          <a href="" class="p-3 fs-3">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+        <div class="linked-in">
+          <a href="" class="p-3 fs-3">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="e-mail">
+          <a href="" class="p-3 fs-3">
+            <i class="fa-solid fa-at"></i>
+          </a>
+        </div>
+        <div class="whatsapp">
+          <a href="" class="p-3 fs-3">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="github">
+          <a href="" class="p-3 fs-3">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer" class="bg-dark text-light"></footer>
+  <!-- bootstrap JS -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
